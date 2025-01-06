@@ -1,99 +1,131 @@
-/* Estilo del body: centrado y organizado en columna */
+/* Fondo del body */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin: 0;
     height: 100vh;
-    background-color: #f4f4f9; /* Fondo claro para un aspecto limpio */
-}
-
-/* Estilo para el encabezado */
-h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #333; /* Color oscuro para el título */
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Estilo para el mapa */
-#mapa {
-    height: 60vh;
-    width: 80vw; /* Aumentado el ancho para un mapa más grande */
-    margin-bottom: 5%; /* Menor espacio debajo */
-    border-radius: 10px; /* Bordes redondeados para el mapa */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-}
-
-/* Estilo para el contenido de los popups */
-.leaflet-popup-content {
     display: flex;
-    justify-content: center;
+    background-image: url('king.jpg'); /* Cambia 'king.jpg' si usas otro archivo */
+    background-size: cover;
+    background-position: center;
+    font-family: "Lexend Deca", serif;
+  
+    color: #8c8c8c;
+}
+
+/* Contenedor principal */
+#container {
+    display: flex;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+}
+
+/* Estilos Generales del Panel */
+.panel {
+    display: flex;
     flex-direction: column;
-    padding: 15px;
-    background-color: #fff; /* Fondo blanco para los popups */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 250px; /* Limitar el ancho del popup */
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo gris con transparencia */
+    color: #fff; /* Texto blanco */
+    width: 450px; /* Ancho del panel */
+    max-height: 100vh; /* Ocupa toda la altura */
+    overflow-y: auto; /* Scroll vertical */
+    overflow-x: hidden; /* Sin scroll horizontal */
+    padding: 16px;
+    border-right: 1px solid #444; /* Borde derecho */
 }
 
-/* Títulos dentro del popup */
-.leaflet-popup-content > h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #444; /* Color gris oscuro para el título */
+/* Encabezados */
+.panel-header {
+    font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
 }
 
-/* Ocultar la atribución de Leaflet */
-.leaflet-control-attribution {
-    display: none;
+/* Secciones del Panel */
+.panel-section {
+    margin-bottom: 24px;
 }
 
-/* Mejora del estilo de los marcadores al interactuar con ellos */
-.leaflet-interactive {
-    transition: 0.5s ease; /* Transición suave en la interacción */
-    fill-opacity: 0.3;
+.panel-section-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 6px;
 }
 
-/* Cambio de opacidad al pasar el ratón sobre los elementos interactivos */
-.leaflet-interactive:hover {
-    fill-opacity: 0.7; /* Aumento de la opacidad al pasar el ratón */
-    transition: 0.5s ease; /* Transición suave */
+/* Botones en el Panel */
+.panel-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
 }
 
-/* Estilo para el marcador cuando el ratón pasa sobre él */
-.leaflet-marker-pane {
-    transition: transform 0.3s ease, width 0.3s ease; /* Transición suave */
+.panel-button {
+    background-color: #1ba0ff; /* Azul llamativo */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Agrandar el marcador al pasar el ratón por encima */
-.leaflet-marker-pane:hover {
-    filter: hue-rotate(9deg); /* Añadir un filtro de cambio de color */
+.panel-button:hover {
+    background-color: #007acc; /* Azul más oscuro */
 }
 
-/* Estilo de los controles de mapa (botones y controles) */
-.leaflet-control-zoom {
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y semi-transparente */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 5px;
+.panel-button.disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
-.leaflet-control-zoom-in, .leaflet-control-zoom-out {
-    font-size: 18px; /* Aumentar el tamaño de los botones */
-    color: white; /* Color blanco para los botones */
+/* Social Links */
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
 }
 
-.leaflet-control-zoom-in:hover, .leaflet-control-zoom-out:hover {
-    background-color: #333; /* Color más oscuro al hacer hover */
+.social-item {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo para el control de atribución si lo necesitas */
-.leaflet-control-attribution {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la atribución */
-    border-radius: 5px;
-    padding: 8px;
-    font-size: 12px;
-    color: white;
+.social-item:hover {
+    background-color: #1ba0ff;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .panel {
+        width: 100%; /* Panel ocupa todo el ancho en pantallas pequeñas */
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+}
+
+/* Mapa */
+#mapa {
+    flex: 1; /* El mapa ocupa todo el espacio restante */
+    margin: 50px; /* Márgenes de 50px alrededor */
+    margin-left: 40px; /* Espaciado adicional para compensar el mayor ancho del panel */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para el mapa */
 }
