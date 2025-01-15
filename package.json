@@ -1,0 +1,15 @@
+{
+  "name": "idart-repositorio",
+  "version": "1.0.0",
+  "main": "mapa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "vite": "^6.0.7"
+  }
+}

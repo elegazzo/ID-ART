@@ -6,8 +6,8 @@ body {
     background-image: url('king.jpg'); /* Cambia 'king.jpg' si usas otro archivo */
     background-size: cover;
     background-position: center;
-    font-family: "Lexend Deca", serif;
-  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
     color: #8c8c8c;
 }
 
@@ -22,7 +22,7 @@ body {
 .panel {
     display: flex;
     flex-direction: column;
-    background-color: rgba(51, 51, 51, 0.8); /* Fondo gris con transparencia */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo gris con transparencia */
     color: #fff; /* Texto blanco */
     width: 450px; /* Ancho del panel */
     max-height: 100vh; /* Ocupa toda la altura */
@@ -37,39 +37,45 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    line-height: 1.0; /* Espaciado reducido entre líneas */
     text-transform: uppercase;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #555;
+    margin: 0; /* Sin margen */
     padding-bottom: 8px;
+    border-bottom: 1px solid #555;
 }
 
 /* Secciones del Panel */
 .panel-section {
-    margin-bottom: 24px;
+    margin-bottom: 4px; /* Reducir espacio entre secciones */
+    line-height: 1.0; /* Ajustar espaciado entre líneas */
+    padding: 0; /* Sin padding */
 }
 
+/* Títulos de Sección */
 .panel-section-title {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin: 2px 0; /* Reducir márgenes superior e inferior */
+    padding-bottom: 2px; /* Reducir espacio inferior */
+    line-height: 1.1; /* Espaciado compacto entre líneas */
     border-bottom: 1px solid #555;
-    padding-bottom: 6px;
 }
 
 /* Botones en el Panel */
 .panel-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 2px; /* Reducir espacio entre botones */
     justify-content: center;
 }
 
+/* Botones Individuales */
 .panel-button {
     background-color: #1ba0ff; /* Azul llamativo */
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 8px 12px;
+    padding: 6px 10px; /* Botones más compactos */
     text-align: center;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -91,7 +97,7 @@ body {
 .social {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 16px;
+    margin-top: 12px; /* Reducir espacio superior */
 }
 
 .social-item {
@@ -124,8 +130,9 @@ body {
 /* Mapa */
 #mapa {
     flex: 1; /* El mapa ocupa todo el espacio restante */
-    margin: 50px; /* Márgenes de 50px alrededor */
-    margin-left: 40px; /* Espaciado adicional para compensar el mayor ancho del panel */
-    border-radius: 10px; /* Bordes redondeados */
+    margin: 40px;/* Reducir márgenes alrededor */
+    min-width: 300px; /* Ancho mínimo para pantallas pequeñas */
+    margin-left: 30px; /* Espaciado ajustado */
+    border-radius: 10px; /* Bodes redondeados */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para el mapa */
 }

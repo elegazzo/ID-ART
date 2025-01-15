@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Un mapa interactivo usando Leaflet.js">
     <meta name="author" content="Alexis Franco">
-    
+
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
@@ -15,36 +15,60 @@
     <link rel="icon" href="https://www.ler.uam.mx/microcbi/wp-content/uploads/2023/09/UAML.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="panel">
-        <a href="#" class="no-style sidebar-logo-link">
-          <img id="logo-sidebar" src="idart.png" alt="Mi Logo" />
-        </a>
-        <h2 class="subtitle">Universidad Autonoma Metropolitana / Mapa Interactivo </h2>
-        <p class="mb-3 information">
-          Unidad Lerma // Clubes, Actividades, Eventos, Repositorios.<br/>
-          <a class='accent-link' href='#'>Enlace 1</a>,
-          <a class='accent-link' href='#'>Enlace 2</a>
-          & <a class='accent-link' href='#'>Enlace 3</a>.
-        </p>
-        <div class="social">
-          <!-- Íconos sociales -->
-          <a href="#" class="social-item social-facebook">FB</a>
-          <a href="#" class="social-item social-twitter">TW</a>
-          <a href="#" class="social-item social-whatsapp">WA</a>
-        </div>
-      </div>
-      
+    <div id="container">
+        <!-- Panel Lateral -->
+        <div class="panel">
+            <a href="#" class="no-style sidebar-logo-link">
+                <img id="logo-sidebar" src="idart.png" alt="Mi Logo" />
+            </a>
 
-        <!-- Mapa -->
-        <div id="mapa"></div>
+            <div class="panel-section">
+                <h2 class="panel-section-title">Universidad Autónoma Metropolitana / Mapa Interactivo</h2>
+                <p class="panel-section-content">
+                    Unidad Lerma // Clubes, Actividades, Eventos, Repositorios.<br />
+                    <a class="accent-link" href="#">Enlace 1</a>,
+                    <a class="accent-link" href="#">Enlace 2</a>
+                    & <a class="accent-link" href="#">Enlace 3</a>.
+                </p>
+            </div>
+
+            <div class="panel-section">
+                <h2>Locaciones</h2>
+                <div id="locaciones">
+                    <button id="toggle-clubes" class="text-button">Clubes</button>
+                    <button id="toggle-actividades" class="text-button">Actividades</button>
+                    <button id="toggle-eventos" class="text-button">Eventos</button>
+                    <button id="toggle-repositorios" class="text-button">Repositorios</button>
+                    <!-- Agrega más botones aquí si deseas para otras categorías -->
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <button id="add-marker-btn">Añadir Marcador</button>
+                <button id="delete-marker-btn">Borrar Marcador</button>
+                <p>Usa los botones para gestionar las locaciones en el mapa.</p>
+            </div>
+
+            <div class="panel-section social">
+                <a href="#" class="social-item social-facebook">FB</a>
+                <a href="#" class="social-item social-twitter">TW</a>
+                <a href="#" class="social-item social-whatsapp">WA</a>
+            </div>
+        </div>
+
+       <!-- Mapa -->
+       <div id="mapa"></div>
     </div>
+
+
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
     <script type="module" src="mapa.js" defer></script>
+    
+    
 </body>
 
 </html>
